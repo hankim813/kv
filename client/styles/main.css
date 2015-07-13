@@ -1,0 +1,96 @@
+/* Fonts */
+
+@import url(http://fonts.googleapis.com/css?family=Palanquin:500);
+@import url(http://fonts.googleapis.com/css?family=Yantramanav:300);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic);
+
+/* Spacing */
+
+body {
+	padding-top: 70px;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Yantramanav', sans-serif !important;
+}
+
+/* Headers */
+
+.banner-title {
+	font-family: 'Palanquin', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+	margin-bottom: 20px;
+}
+
+/* Navbar */
+
+ul {
+	list-style: none;
+	text-align: center;
+	padding: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 0 3%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+li:hover {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	-o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+	transition:.2s;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+	-o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+	transition:.2s;
+	color: #d26d51;
+}
+
+.clicked {
+	color: #d26d51 !important;
+	font-weight: bold;
+}
+
+/* Content */
+
+.quote-container {
+	margin-top: 55px;
+	text-align: center;
+}
+
+.quote {
+	font-size: 25px;
+	font-style: italic;
+	font-family: 'Vollkorn', serif;
+}
+
+.content-container {
+	padding: 20px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+/* Misc. */
+
+.signature {
+	text-align: center;
+	font-size: 16px;
+	font-style: italic;
+	margin-bottom: 35px;
+}

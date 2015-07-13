@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+
+/**
+  * Module Dependencies
+  */
+
+var parser 	= require('koa-bodyparser');
+var PORT 		= process.env.PORT || 3000;
+var serve 	= require('koa-static');
+var router 	= require('koa-route');
+var koa 		= require('koa');
+var logger 	= require('koa-logger');
+
+/**
+ * Expose 'app'
+ */
+
+exports = app = koa();
+
+/**
+ * Setup logger for dev env
+ */
+
+app.use(logger());
+
+/**
+ * Setup static director
+ */
+
+app.use(serve('client'));
+
+/**
+ * Use body parser
+ */
+
+app.use(parser());
+
+/** 
+ * Configure routes
+ */
+
+var routes = require('./lib/routes.js');
+app.use(router.get('/quality', routes.quality));
+
+/**
+ * Listen on PORT
+ */
+
+ app.listen(PORT);
+ console.log('Magic happens on port ' + PORT);
