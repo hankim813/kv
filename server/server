@@ -40,7 +40,7 @@ app.use(parser());
  */
 
 var routes = require('./lib/routes.js');
-app.use(router.get('/quality', routes.quality));
+app.use(router.get('/', routes.quality));
 
 /**
  * Listen on PORT
