@@ -26,5 +26,10 @@ angular
 			.state('quality', {
 				url: '/everlane/quality',
 				templateUrl: 'views/quality.html'
+			})
+
+			.state('rapport', {
+				url: '/everlane/rapport',
+				templateUrl: 'views/rapport.html'
 			});
 	}]);

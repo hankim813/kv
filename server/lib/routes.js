@@ -7,7 +7,8 @@ var render = require('./render');
 
 /**
  * Home
- *
+ * 
+ * Serve angular index.html
  * endpoint: '/'
  * @public
  */
