@@ -6,48 +6,24 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="shortcut icon" href="/images/favicon.ico" />
     <link href='https://fonts.googleapis.com/css?family=Palanquin:500' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Vollkorn:400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Yantramanav:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- load angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+
+    <!-- dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- controllers -->
+    <script src="/js/index.js"></script>
+    <script src="/js/controllers/landing.js"></script>
+
   </head>
-  <body>
-    <div class="container-fluid">
-      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-        <h1 class="banner-title">Kiana Vaziri</h1>
-      </div>
-
-      <div class="col-sm-12 col-md-10 col-md-offset-1">
-        <ul class="navlinks">
-          <li><a class="clicked">Quality</a></li>
-          <li><a>Rapport</a></li>
-          <li><a>Engagement</a></li>
-          <li><a>Transparency</a></li>
-          <li><a>Rebel</a></li>
-        </ul>
-      </div>
-
-      <div class="col-sm-12 col-md-10 col-md-offset-1 quote-container">
-        <p class="quote col-sm-4 col-sm-offset-4">we spend months<br> finding the best<br> factories around the world</p>
-      </div>
-      <div class="col-sm-12 col-md-8 col-md-offset-2"><hr></div>
-      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 content-container">
-        <div class="col-sm-6">
-          <p>When it comes to me buying anything, the object in question must always fit my self-made brand and strict standards of quality. Each item is analyzed at length to these regulations before a winner may be announced. So, in the months prior to grad school, I set to searching when I realized one key component for success was missing: an adequate, yet sexy backpack.</p>
-          <p>In the past I had a simple computer bag that weighed my shoulder down enough to justify a crooked spine. I figured for my new prospect I should at least spread the pounds evenly on my unsuspecting shoulders.</p>
-          <p>I looked on all the affordable online stores I could think of—I didn’t dare step foot in a mall for the most unique items can never be found there.</p>
-        </div>
-        <div class="col-sm-6">
-          <p>After hours of online-window-shopping night after night I was beginning to lose confidence. There were either affordable things that had no personality or 1% things that would cost me my personality. Two months had passed; August would have been lost had I not ventured onto an obscure site run by a Uruguayan designer.</p>
-          <p>And there, on the last legs of hope, I found what could only be heard of in legends: The One. The supple-leathered bag was even named after my hometown’s punk-rock legacy, Nirvana.</p>
-          <p>If that wasn’t convincing as fate, then the intricately hand woven design was. I knew the well-crafted color schemes would fit perfectly my brand. The reward of finally having found such a holy grail erased the painful memories of the arduous search. And so I bought it on the spot and never looked back, my mind relieved at such an appropriate find.</p>
-        </div>
-      </div>
-
-      <div class="col-sm-12 signature">
-        <p>- KV -</p>
-      </div>
-    </div>
+  <body ng-app="kvApp" id="parent">
+    <main ui-view class="container-fluid" id="child"></main>
 </body>
 </html>

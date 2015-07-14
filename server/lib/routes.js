@@ -6,13 +6,13 @@
 var render = require('./render');
 
 /**
- * Quality
+ * Home
  *
- * endpoint: '/everlane/quality'
+ * endpoint: '/'
  * @public
  */
 
-exports.quality = function *() {
+exports.home = function *() {
 	this.status = 200;
 	return this.body = yield render('index');
 }
