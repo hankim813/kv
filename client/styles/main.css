@@ -8,6 +8,11 @@ body {
 	font-family: 'Yantramanav', sans-serif !important;
 }
 
+hr {
+	margin: 0;
+}
+
+/* Vertical Spacing */
 #parent {
 	display: table;
 	width: 100%;
@@ -19,6 +24,12 @@ body {
 	text-align: center;
 }
 
+/* Utils */
+
+.t-center {
+	text-align: center;
+}
+
 /* Headers */
 
 .banner-title {
@@ -27,6 +38,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 10px;
 	margin-bottom: 20px;
+	font-size: 3em;
 }
 
 /* Navbar */
@@ -68,6 +80,10 @@ a:hover {
 	color: #d26d51;
 }
 
+.navlinks li a {
+	font-size: 18px;
+}
+
 .clicked {
 	color: #d26d51 !important;
 	font-weight: bold;
@@ -81,16 +97,17 @@ a:hover {
 }
 
 .quote {
-	font-size: 25px;
+	font-size: 20px;
 	font-style: italic;
 	font-family: 'Vollkorn', serif;
+	padding-bottom: 10px;
 }
 
 .content-container {
 	padding: 20px;
-	margin-top: 5px;
 	margin-bottom: 20px;
 	font-size: 16px;
+	text-align: left;
 }
 
 /* Misc. */
