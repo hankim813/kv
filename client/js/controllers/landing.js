@@ -8,12 +8,6 @@ angular
 
 		// Vertical Centering
 		var parent = document.getElementById('parent');
-		parent.style.height = $window.innerHeight + 'px';
+		if (parent) parent.style.height = $window.innerHeight + 'px';
 
-		// Active Link Init
-		vm.isActiveAnchor = isActiveAnchor;
-
-		function isActiveAnchor (currentAnchor) {
-			return $location.path() === currentAnchor;
-		};
 	}]);
