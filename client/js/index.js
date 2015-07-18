@@ -8,13 +8,20 @@
  */
 
 angular
-	.module('kvApp',['ui.router'])
+	.module('kvApp',['ui.router', 'ngAnimate'])
 
 	.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
-		$urlRouterProvider.otherwise('/everlane');
+		// Redirect all invalid routes to main page
+		$urlRouterProvider.otherwise('/');
 
+		// Configure states
 		$stateProvider
+
+			.state('main', {
+				url: '/',
+				templateUrl: 'views/main.html',
+			})
 
 			.state('landing', {
 				url: '/everlane',

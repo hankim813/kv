@@ -42,6 +42,11 @@ hr {
 	font-size: 3em;
 }
 
+.header-link:hover {
+	text-decoration: none;
+	color: inherit; 
+}
+
 /* Navbar */
 
 ul {
@@ -117,5 +122,16 @@ a:hover {
 	text-align: center;
 	font-size: 16px;
 	font-style: italic;
-	margin-bottom: 35px;
+	margin-bottom: 80px;
+}
+
+.delay {
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -ms-animation-delay: 1s;
 }
