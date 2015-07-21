@@ -12,7 +12,8 @@ angular
 			"well it seems like you should email me.",
 			"we can chat over tacos.",
 			"wassup muchacho?",
-			"Buddy the Elf, what's your favorite color?"
+			"Buddy the Elf, what's your favorite color?",
+			"what's goin' on, yvonne?"
 		];
 
 		// Randomly select one

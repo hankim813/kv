@@ -214,11 +214,12 @@ a:hover {
 
 .friends {
 	color: #E6E6E6;
-	padding: 15px;
+	padding: 20px;
 	text-align: right;
-	position: absolute;
-	right: 10px;
-	bottom: 5px;
+}
+
+.friends p {
+	margin: 0;
 }
 
 /* Animation */

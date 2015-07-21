@@ -25,33 +25,43 @@ angular
 
 			.state('landing', {
 				url: '/everlane',
-				templateUrl: 'views/landing.html',
+				templateUrl: 'views/everlane-landing.html',
 				controller: 'LandingController',
 				controllerAs: 'app'
 			})
 
-			.state('rapport', {
-				url: '/everlane/rapport',
+			.state('application', {
+				url: '/everlane/application',
+				templateUrl: 'views/application.html'
+			})
+
+			.state('cover-letter', {
+				url: '/everlane/cover-letter',
+				templateUrl: 'views/cover-letter.html'
+			})
+
+			.state('cover-letter.rapport', {
+				url: '/rapport',
 				templateUrl: 'views/rapport.html'
 			})
 
-			.state('quality', {
-				url: '/everlane/quality',
+			.state('cover-letter.quality', {
+				url: '/quality',
 				templateUrl: 'views/quality.html'
 			})
 
-			.state('engagement', {
-				url: '/everlane/engagement',
+			.state('cover-letter.engagement', {
+				url: '/engagement',
 				templateUrl: 'views/engagement.html'
 			})
 
-			.state('transparency', {
-				url: '/everlane/transparency',
+			.state('cover-letter.transparency', {
+				url: '/transparency',
 				templateUrl: 'views/transparency.html'
 			})
 
-			.state('rebel', {
-				url: '/everlane/rebel',
+			.state('cover-letter.rebel', {
+				url: '/rebel',
 				templateUrl: 'views/rebel.html'
 			})
 
@@ -64,18 +74,20 @@ angular
 	}])
 
 	.run(function($rootScope, $state) {
-     $rootScope.$on("$stateChangeSuccess",  function(event, toState, toParams, fromState, fromParams) {
-         // to be used for back button //won't work when page is reloaded.
-         if (fromState.name === '') {
-         	 $rootScope.previousState = 'main'
-         } else {
-	         $rootScope.previousState = fromState.name;
-         }
-     });
-     //back button function called from back button's ng-click="back()"
-     $rootScope.back = function() {
-        $state.go($rootScope.previousState);
-     };
- });
+		$rootScope.$on("$stateChangeSuccess",  function(event, toState, toParams, fromState, fromParams) {
+		  if (fromState.name === '') {
+		 	  $rootScope.previousState = 'main';
+		 	} else if (fromState.name.includes('cover-letter')) {
+		 		$rootScope.previousState = 'landing';
+		  } else {
+		    $rootScope.previousState = fromState.name;
+		  }
+		});
+
+		//back button function called from back button's ng-click="back()"
+		$rootScope.back = function() {
+		  $state.go($rootScope.previousState);
+		};
+	});
 
 
