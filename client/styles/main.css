@@ -1,5 +1,5 @@
 
-/* Spacing */
+/* General */
 
 body {
 	-webkit-font-smoothing: antialiased;
@@ -13,7 +13,18 @@ hr {
 	border-top: 2px solid #eee;
 }
 
+/* Padding and Margins */
+
+.pt-lg {
+	padding-top: 5%;
+}
+
+.mt-lg {
+	margin-top: 20%;
+}
+
 /* Vertical Spacing */
+
 #parent {
 	display: table;
 	width: 100%;
@@ -31,6 +42,12 @@ hr {
 	text-align: center;
 }
 
+/* Fonts */
+
+.header-font {
+	font-family: 'Palanquin', sans-serif;
+}
+
 /* Headers */
 
 .banner-title {
@@ -39,6 +56,11 @@ hr {
   text-transform: uppercase;
   letter-spacing: 10px;
 	margin-bottom: 20px;
+	font-size: 3em;
+}
+
+.slogan {
+	text-align: left;
 	font-size: 3em;
 }
 
@@ -95,6 +117,54 @@ a:hover {
 	font-weight: bold;
 }
 
+/* Card */
+
+.card {
+	box-shadow: 0.5px 0.5px 0.5px 0.5px #D8D8D8;
+	height: 350px;
+	opacity: 0.7;
+	transition: all 0.2s;
+	position: relative;
+}
+
+.card:hover {
+	opacity: 1;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.card h2 {
+	font-size: 2.5em;
+	color: #fff;
+	margin: 0;
+	padding: 5%;
+}
+
+.card-content {
+	position: absolute;
+	bottom: 3%;
+	right: 5%;
+}
+
+.card-content-2 {
+	padding-top: 150px;
+}
+
+.c-contact {
+	background-image: url('../images/kiki-gallery.jpg');
+	background-size: cover;
+}
+
+.c-gallery {
+	background-image: url('../images/kiki-sleep.jpg');
+	background-size: cover;
+}
+
+.c-resume {
+	background-image: url('../images/kiki-majestic.jpg');
+	background-size: cover;
+}
+
 /* Content */
 
 .quote-container {
@@ -134,4 +204,15 @@ a:hover {
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s;
   -ms-animation-delay: 1s;
+}
+
+.delay-2 {
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  -o-animation-delay: 2.5s;
+  -ms-animation-delay: 2.5s;
 }
