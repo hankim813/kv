@@ -143,7 +143,7 @@ a:hover {
 .card-content {
 	position: absolute;
 	bottom: 3%;
-	right: 5%;
+	right: 25%;
 }
 
 .card-content-2 {
@@ -186,6 +186,23 @@ a:hover {
 	text-align: left;
 }
 
+.contact-content {
+	padding: 20px;
+	font-size: 2em;
+	margin: 0;
+}
+
+/* Images */
+
+.faceshot {
+	width: 150px;
+	opacity: 0.7;
+}
+
+.md-sz {
+	font-size: 2em;
+}
+
 /* Misc. */
 
 .signature {
@@ -194,6 +211,17 @@ a:hover {
 	font-style: italic;
 	margin-bottom: 80px;
 }
+
+.friends {
+	color: #E6E6E6;
+	padding: 15px;
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+}
+
+/* Animation */
 
 .delay {
   -webkit-animation-duration: 1.5s;
@@ -215,4 +243,47 @@ a:hover {
   -moz-animation-delay: 2.5s;
   -o-animation-delay: 2.5s;
   -ms-animation-delay: 2.5s;
+}
+
+.delay-3 {
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	-ms-animation-duration: 1s;
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	-o-animation-delay: 0.5s;
+	-ms-animation-delay: 0.5s;
+}
+
+.delay-4 {
+	-webkit-animation-duration: 1.5s;
+	-moz-animation-duration: 1.5s;
+	-o-animation-duration: 1.5s;
+	-ms-animation-duration: 1.5s;
+	-webkit-animation-delay: 1.5s;
+	-moz-animation-delay: 1.5s;
+	-o-animation-delay: 1.5s;
+	-ms-animation-delay: 1.5s;
+}
+
+.cta-links {
+	padding-left: 15px;
+	font-size: 1.8em;
+}
+
+#back-button {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	color: #585858;
+	opacity: 0.8;
+	transition: all 0.2s;
+}
+
+#back-button:hover {
+	transition: all 0.2s;
+	opacity: 1;
+	cursor: pointer;
+	color: black;
 }

@@ -53,5 +53,29 @@ angular
 			.state('rebel', {
 				url: '/everlane/rebel',
 				templateUrl: 'views/rebel.html'
+			})
+
+			.state('contact', {
+				url: '/contact',
+				templateUrl: '/views/contact.html',
+				controller: 'ContactController',
+				controllerAs: 'contact'
 			});
-	}]);
+	}])
+
+	.run(function($rootScope, $state) {
+     $rootScope.$on("$stateChangeSuccess",  function(event, toState, toParams, fromState, fromParams) {
+         // to be used for back button //won't work when page is reloaded.
+         if (fromState.name === '') {
+         	 $rootScope.previousState = 'main'
+         } else {
+	         $rootScope.previousState = fromState.name;
+         }
+     });
+     //back button function called from back button's ng-click="back()"
+     $rootScope.back = function() {
+        $state.go($rootScope.previousState);
+     };
+ });
+
+
