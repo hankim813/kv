@@ -12,6 +12,7 @@ angular
 		var parent = document.getElementById('parent');
 		if (parent) parent.style.height = $window.innerHeight + 'px';
 
+		// Application questions
 		var questions = [
 			'What type of people do you like to work with?',
     	'Not work with?',
@@ -20,6 +21,7 @@ angular
     	'Tell us about a recent situation that stressed you out.',
     	'Why are you a perfect fit for the Assistant Producer role?'];
     
+    // Application answers
     var answers = [
     	'People with an upbeat attitude and high energy. I am rather bubbly myself, but it’s always nice to have another person’s energy to feed off of as I find it “gets the people going” (Chazz Michael Michaels). I also always appreciate people who are welcoming from the start and straightforward with me at all times. I strive for efficiency and these often help streamline the processes.',
     	'I prefer not to work with people who are close-minded because it greatly limits the possibilities of your task or goal. I find myself becoming frustrated with these types of people as they generally refuse to see anything but the negative, which ultimately limits their ambitions. Complaining and negative attitudes get you nowhere, while hope and positivity pushes you to take a step. <br><br>Although I prefer not to work with such people, it is not impossible for me to do so. I’ve had many experiences working in groups and in every single one conflicts arose but we always managed to reach our end goal through proper communication.',
@@ -28,6 +30,20 @@ angular
     	'When I realized I couldn’t cook.  I’ve been trying to live organically in an artificial world, which is just as difficult as it sounds.  There may be many more options than ever in the organic department, but they mean nothing if I am ill equipped to utilize all my freshly perishable ingredients.  <br><br>I was spoiled with my mother’s health-conscious grocery lists and exotic concoctions for every meal.  It wasn’t until I arrived at college that I realized how far I was from my previously no-hormone, no-antibiotics, and no-added-preservatives diet.  As a college student living on campus all four years I had either no kitchen or one not fit for use.  So I did what college kids do best and ordered in or went out to eat. <br><br>It wasn’t until this past year as an actual adult living in a real apartment with a sophisticated kitchen (meaning it had a full-sized fridge and a working stove) that I realized how far behind I really was.  I was lacking the creativity it took to cook like my mother.  In my first attempts at buying only fresh vegetables, they somehow managed to go bad after I used them once and stuffed them in a drawer for “later use.”  Shocking right?  Eventually I learned the prestige of cooking in bulk quantities and the splendor of leftovers.  <br><br>Once I deemed myself responsible enough to use my ingredients before they met their expiration, I thought it time the grasshopper become the master—or at least to take the first hop.  When I went home for breaks I shadowed my mother as she cooked, mimicking her movements for myself when I returned to school.  <br><br>I found ways to make cooking more enjoyable by persuading my then-boyfriend into doing half the work.  It became a creative project and kept me happy and fed all at once.  I couldn’t even go back to eating takeout everyday because now I only have taste for home cooking.  With food of unknown origin, I was too unnerved with how I might have been deteriorating my body.  <br><br>So now, I’m happy to say that I’ve turned this around and am all-natural once again.  Although don’t be alarmed if you see me with a cheeseburger in hand every now and then—if I were Supergirl it would be my kryptonite.',
     	'<strong>Attention to detail</strong>—I’ve got it.  For example, this specific question in the application online literally reads:  “Why are you a perfect fit the Assistant Producer role?”  This sentence is incorrect as it omits the word ‘for.’ <br><br><strong>Communication</strong>—I do it.  To me, this skill encompasses many others: how the person in question listens to, collaborates with, and motivates those communicated with.  One experience comes to mind where I was grouped with five other peers, a few of whom did not exactly complement my working style.  Group work requires adaptability and patience; in situations like the aforementioned I observed our dynamic and reacted appropriately.  <br><br>For example, one colleague in particular was very narrow-minded and negative—he only presented various forms of the same idea and would shoot down any ‘out there’ ideas others set forth. This didn’t help the lackluster attitude that veiled our group meetings.  With Negative Ned, I listened to his ideas, praised those that were valuable and subtly redirected those that were not.  With the rest of the Lackluster Lads, I allowed my own enthusiastic energy to uplift and focus their own energies.  Interaction is everywhere and I recognize the importance of knowing how to draw the best out of someone when they are unable to do so themselves.  I still have much to learn on this front; however, I have gained the understanding for doing so. <br><br>And lastly the job description—I’m excited by it; <em>passion</em> always wins over practicality in my book.'
     ];
+
+    // Question pagination
+    function goTo(index) {
+    	clear();
+    	vm.index = index;
+    	var currentQuestion = '#q' + index;
+    	for (var i = 0; i < 6; i++) {
+    		var q = '#q' + i;
+    		$(q).addClass('fa-circle-o').removeClass('fa-circle');
+    	}
+    	$(currentQuestion).removeClass('fa-circle-o').addClass('fa-circle');
+    	typeQuestion('+');
+    }
+    vm.goTo = goTo;
 
     // Typing Effect
     var captionLength = 0;
@@ -117,5 +133,4 @@ angular
 
 		typeQuestion('+');
 
-		// TODO: ADD PAGINATION BUTTONS
 	}]);

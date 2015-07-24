@@ -1,15 +1,20 @@
+<div class="pagination">
+	<i class="fa fa-circle" id="q0" ng-click="app.goTo(0)"></i> <i class="fa fa-circle-o" id="q1" ng-click="app.goTo(1)"></i> <i class="fa fa-circle-o" id="q2" ng-click="app.goTo(2)"></i> <i class="fa fa-circle-o" id="q3" ng-click="app.goTo(3)"></i> <i class="fa fa-circle-o" id="q4" ng-click="app.goTo(4)"></i> <i class="fa fa-circle-o" id="q5" ng-click="app.goTo(5)"></i>
+</div>
+
 <div ng-include src="'views/back-button.html'"></div>
 <div id="parent">
 	<div id="child">
-		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 pt-lg">
 			<span id="question" class="question"></span><span id="cursor" class="question">|</span>
 		</div>
 		<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
-			<p id="answer" class="mt-md t-left"></p>
+			<p id="answer" class="mt-md t-left answer"></p>
 			<div class="mt-md">
-				<span class="hidden links" id="prev" ng-click="app.prev()">prev | </span><span class="hidden links" id="next" ng-click="app.next()">next</span>
+				<span class="hidden links" id="prev" ng-click="app.prev()"><i class="fa fa-angle-left"></i> prev | </span><span class="hidden links" id="next" ng-click="app.next()">next <i class="fa fa-angle-right"></i></span>
 				<span class="hidden question" id="end">Thanks for reading! <br><i class="fa fa-heart"></i><br> Care to see more? Click <a ui-sref="main">here</a>!</span>
 			</div>
 		</div>
 	</div>
 </div>
+
