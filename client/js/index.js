@@ -32,7 +32,9 @@ angular
 
 			.state('application', {
 				url: '/everlane/application',
-				templateUrl: 'views/application.html'
+				templateUrl: 'views/application.html',
+				controller: 'ApplicationController',
+				controllerAs: 'app'
 			})
 
 			.state('cover-letter', {
@@ -75,11 +77,13 @@ angular
 
 	.run(function($rootScope, $state) {
 		$rootScope.$on("$stateChangeSuccess",  function(event, toState, toParams, fromState, fromParams) {
-		  if (fromState.name === '') {
-		 	  $rootScope.previousState = 'main';
-		 	} else if (fromState.name.includes('cover-letter')) {
+		  if (fromState.name.includes('cover-letter') || $state.current.name === 'application') {
 		 		$rootScope.previousState = 'landing';
-		  } else {
+		 	} else if ($state.current.name === 'landing') {
+		 		$rootScope.previousState = 'main';
+		  } else if (fromState.name === '') {
+		 	  $rootScope.previousState = 'main';
+		  }  else {
 		    $rootScope.previousState = fromState.name;
 		  }
 		});
