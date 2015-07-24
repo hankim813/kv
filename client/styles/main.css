@@ -28,6 +28,14 @@ hr {
 	padding-top: 5%;
 }
 
+.pt-xl {
+	padding-top: 15%;
+}
+
+.pt-sp {
+	padding-top: 10px;
+}
+
 .mt-lg {
 	margin-top: 18%;
 }
@@ -50,6 +58,11 @@ hr {
 }
 
 /* Utils */
+
+.small {
+	font-size: 1em;
+	color: #A4A4A4;
+}
 
 .t-center {
 	text-align: center;
@@ -143,7 +156,7 @@ a:hover {
 }
 
 .pagination {
-	position: absolute;
+	position: relative;
 	top: 3%;
 	left: 3%;
 }
@@ -258,7 +271,7 @@ a:hover {
 
 .friends {
 	color: #BDBDBD;
-	padding: 20px;
+	padding: 10px;
 	text-align: right;
 }
 

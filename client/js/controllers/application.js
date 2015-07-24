@@ -43,6 +43,7 @@ angular
     	$(currentQuestion).removeClass('fa-circle-o').addClass('fa-circle');
     	typeQuestion('+');
     }
+
     vm.goTo = goTo;
 
     // Typing Effect
@@ -87,16 +88,6 @@ angular
 			}
 		}
 
-		function updateIndex(direction){
-			if (direction === '+') {
-				vm.index++;
-			} else {
-				if (vm.index > 0) {
-					vm.index--;
-				}
-			}
-		}
-
 		function clear(){
 			$('#answer').text('').removeClass('animated fadeIn');
 			hideNav();
@@ -115,7 +106,6 @@ angular
 		}
 
 		vm.next = function(){
-			clear();
 			if (vm.index === 5) { 
 				vm.index = 0; 
 				gotoCoverLetter();
@@ -123,12 +113,12 @@ angular
 			} else { 
 				vm.index++ 
 			};
-			typeQuestion('+');
+			goTo(vm.index);
 		}
+
 		vm.prev = function(){
-			clear();
 			if (vm.index !== 0) vm.index--;
-			typeQuestion('-');
+			goTo(vm.index);
 		}
 
 		typeQuestion('+');

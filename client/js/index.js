@@ -37,6 +37,13 @@ angular
 				controllerAs: 'app'
 			})
 
+			.state('gallery', {
+				url: '/gallery',
+				templateUrl: 'views/gallery.html',
+				controller: 'GalleryController',
+				controllerAs: 'gallery'
+			})
+
 			.state('cover-letter', {
 				url: '/everlane/cover-letter',
 				templateUrl: 'views/cover-letter.html'
