@@ -12,7 +12,7 @@ angular
 
 		var currentIndex = 0;
 		vm.list = [];
-		for (var i = 0; i < 9; i++) {
+		for (var i = 0; i < 14; i++) {
 			var img = i + 1 + '.png';
 			vm.list.push(img);
 		}
@@ -48,13 +48,13 @@ angular
 			if (currentIndex !== 0) {
 				currentIndex--;
 			} else {
-				currentIndex = 8;
+				currentIndex = 13;
 			}
 			updateSet(currentIndex);
 		}
 
 		vm.next = function() {
-			if (currentIndex === 8) { 
+			if (currentIndex === 13) { 
 				currentIndex = 0; 
 			} else { 
 				currentIndex++ 
