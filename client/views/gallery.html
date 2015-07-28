@@ -9,7 +9,7 @@
 
 		<div class="col-sm-10 col-sm-offset-1 mt-md">
 			<i class="fa fa-arrow-left gallery-nav-btn" ng-click="gallery.prev()"></i>
-			<img ng-repeat="img in gallery.list" ng-src="../images/{{img}}" class="thumbnails" ng-click="gallery.updateSet($index + 1)"></img>
+			<img ng-repeat="img in gallery.list" ng-src="../images/{{img}}" class="thumbnails" ng-click="gallery.updateSet($index)"></img>
 			<i class="fa fa-arrow-right gallery-nav-btn" ng-click="gallery.next()"></i>
 		</div>
 	</div>

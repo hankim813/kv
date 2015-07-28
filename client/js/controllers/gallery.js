@@ -38,7 +38,7 @@ angular
  			currentIndex = index;
  			vm.currentImg = vm.list[index];
  			vm.currentCaption = captions[index];
- 			$location.hash(currentIndex);
+ 			$location.hash(parseInt(index) + 1 + '');
 
  		}
  		vm.updateSet = updateSet;
