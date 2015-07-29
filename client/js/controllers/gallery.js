@@ -18,7 +18,7 @@ angular
 		}
 		var captions = [
 			'I\'m Persian, like the rug.',
-			'The legends are true... #seattle #noRain',
+			'The legends are true... #seattle #norain',
 			'It\'s no yellow submarine but...',
 			'If my soul were a pair of shoes.',
 			'All I need is a plain white tee.',

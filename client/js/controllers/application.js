@@ -19,7 +19,7 @@ angular
     	'What brands do you look to for inspiration?',
     	'It’s a Thursday night, what are you doing?',
     	'Tell us about a recent situation that stressed you out.',
-    	'Why are you a perfect fit for the Assistant Producer role?'];
+    	'Why are you a perfect fit for the Assistant Photo Producer role?'];
     
     // Application answers
     var answers = [
@@ -50,7 +50,10 @@ angular
     var captionLength = 0;
     var caption = '';
 
-    setInterval (cursorAnimation, 600);
+    // Cursor effect
+    function cursorBlink() {
+	    setInterval (cursorAnimation, 600);
+    }
 
     function cursorAnimation() {
       $('#cursor').animate({
@@ -61,6 +64,7 @@ angular
     }
 
     function typeQuestion(direction) {
+    	cursorBlink();
     	caption = questions[vm.index];
       $('#question').html(caption.substr(0, captionLength++));
       if(captionLength < caption.length+1) {
@@ -71,6 +75,7 @@ angular
         setTimeout(function() { 
         	showAnswer(vm.index);
         	showNavLinks();
+        	killBlink();
         }, 1000);
       }
     }
