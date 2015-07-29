@@ -202,12 +202,11 @@ a:hover {
 	font-size: 2.5em;
 	color: #fff;
 	margin: 0;
-	padding: 5%;
 }
 
 .card-content {
 	position: absolute;
-	bottom: 3%;
+	bottom: 5%;
 	right: 25%;
 }
 
