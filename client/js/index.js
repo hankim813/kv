@@ -88,9 +88,9 @@ angular
 		 		$rootScope.previousState = 'landing';
 		 	} else if ($state.current.name === 'landing') {
 		 		$rootScope.previousState = 'main';
-		  } else if (fromState.name === '') {
+		  } else if (fromState.name === '' || fromState.name === 'contact') {
 		 	  $rootScope.previousState = 'main';
-		  }  else {
+		  } else {
 		    $rootScope.previousState = fromState.name;
 		  }
 		});
